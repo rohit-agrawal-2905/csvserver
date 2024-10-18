@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 5s  # How often to scrape targets (5 seconds)
+
+scrape_configs:
+  - job_name: 'csvserver'
+    static_configs:
+      - targets: ['csvserver:9300']  # This should match the container's service name and port
+
